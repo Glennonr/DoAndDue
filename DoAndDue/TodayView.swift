@@ -14,6 +14,7 @@ struct TodayView: View {
     @State private var showingAddTask = false
     #if DEBUG
     @State private var showingPendingNotifications = false
+    @State private var pendingReminderCount = 0
     #endif
 
     private var calendar: Calendar {
@@ -165,14 +166,30 @@ struct TodayView: View {
             }
             #if DEBUG
             .sheet(
-                isPresented: $showingPendingNotifications
+                isPresented: $showingPendingNotifications,
+                onDismiss: refreshPendingReminderCount
             ) {
                 PendingNotificationsDebugView()
+            }
+            .task {
+                await refreshPendingReminderCount()
             }
             #endif
         }
         .tint(DoAndDueStyle.accent)
     }
+
+    #if DEBUG
+    private func refreshPendingReminderCount() async {
+        pendingReminderCount = await NotificationManager.shared.debugPendingNotifications().count
+    }
+
+    private func refreshPendingReminderCount() {
+        Swift.Task {
+            await refreshPendingReminderCount()
+        }
+    }
+    #endif
 
     private var screenHeader: some View {
         HStack(alignment: .center) {
@@ -186,7 +203,7 @@ struct TodayView: View {
             Button {
                 showingPendingNotifications = true
             } label: {
-                Image(systemName: "bell.badge")
+                Image(systemName: pendingReminderCount > 0 ? "bell.badge" : "bell")
                     .font(.system(size: 17, weight: .semibold))
                     .foregroundStyle(DoAndDueStyle.accent)
                     .frame(width: 38, height: 38)

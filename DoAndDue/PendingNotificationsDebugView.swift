@@ -24,7 +24,7 @@ struct PendingNotificationsDebugView: View {
                 } else if snapshots.isEmpty {
                     EmptyTaskListView(
                         title: "No pending reminders",
-                        message: "Do & Due has no scheduled local notifications right now.",
+                        message: "You have no scheduled notifications right now.",
                         systemImage: "bell.slash"
                     )
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
