@@ -1,18 +1,19 @@
-# Do & Due Privacy Policy Draft
+---
+title: Do & Due Privacy Policy
+permalink: /privacy/
+---
 
-_Last updated: August 16, 2026_
+# Do & Due Privacy Policy
 
-This is draft copy for the public privacy policy URL required before submitting Do & Due to the App Store. Review and update it before publishing.
-
-## Overview
+_Last updated: August 17, 2026_
 
 Do & Due is a personal task and reminder app. It is designed to store your tasks, due dates, recurrence settings, completion history, reminders, and widget data on your device.
 
 ## Data We Do Not Collect
 
-Do & Due does not currently collect, transmit, sell, rent, or share personal data with the developer or third parties.
+Do & Due does not collect, transmit, sell, rent, or share personal data with the developer or third parties.
 
-Do & Due does not currently use:
+Do & Due does not use:
 
 * User accounts
 * Advertising

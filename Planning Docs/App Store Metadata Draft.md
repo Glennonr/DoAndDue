@@ -75,6 +75,20 @@ Create a simple public support page with:
 * Basic troubleshooting for notifications and widgets
 * Privacy policy link
 
+Draft source: `docs/support.md`
+
+Expected GitHub Pages URL after Pages is enabled from the `docs/` folder:
+
+`https://glennonr.github.io/DoAndDue/support/`
+
+## Privacy Policy URL
+
+Draft source: `docs/privacy.md`
+
+Expected GitHub Pages URL after Pages is enabled from the `docs/` folder:
+
+`https://glennonr.github.io/DoAndDue/privacy/`
+
 ## Review Notes Draft
 
 Do & Due is a local-first recurring task/reminder app. No account or demo credentials are required.

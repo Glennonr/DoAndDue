@@ -1671,9 +1671,9 @@ This section tracks what Do & Due needs before a first App Store submission. It 
 * [ ] Primary category: likely `Productivity`.
 * [ ] Secondary category: optional; consider `Utilities` if useful.
 * [ ] Age rating questionnaire completed. Expected result should be low age rating because the app has no user-generated public content, web access, purchases, gambling, medical treatment, or mature content.
-* [ ] Support URL created and publicly accessible.
+* [ ] Support URL created and publicly accessible. Draft source exists at `docs/support.md`; enable GitHub Pages from the `docs/` folder.
 * [ ] Marketing URL optional.
-* [ ] Privacy Policy URL created and publicly accessible.
+* [ ] Privacy Policy URL created and publicly accessible. Draft source exists at `docs/privacy.md`; enable GitHub Pages from the `docs/` folder.
 * [ ] Copyright holder and contact information entered.
 * [ ] Keywords written around recurring tasks, reminders, maintenance, chores, due dates, checklist, and home upkeep.
 * [ ] Description and promotional text accurately describe the app's current features.
@@ -1683,7 +1683,7 @@ This section tracks what Do & Due needs before a first App Store submission. It 
 
 ## Privacy and data disclosure
 
-* [ ] Publish a privacy policy before submission.
+* [ ] Publish a privacy policy before submission. Draft source exists at `docs/privacy.md`; final URL should be added to App Store Connect after GitHub Pages is enabled.
 * [ ] Complete App Privacy answers in App Store Connect.
 * [ ] Current expected privacy posture: no account, no analytics SDK, no ads, no tracking, no third-party data sharing, and task data stored locally on-device.
 * [ ] Confirm whether local notification content, widget snapshots, and SwiftData storage count only as on-device user content and are not collected by the developer.
