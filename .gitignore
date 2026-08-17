@@ -1,0 +1,66 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Xcode user state
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+*.xcuserdatad/
+
+# Xcode build products
+build/
+Build/
+DerivedData/
+*.ipa
+*.dSYM
+*.dSYM.zip
+*.xcarchive
+*.app
+*.appex
+*.xctest
+Products/
+
+# Swift Package Manager local state
+.build/
+.swiftpm/
+
+# Keep Package.resolved for app projects when present.
+!Package.resolved
+
+# CocoaPods and Carthage generated dependencies
+Pods/
+Carthage/Build/
+
+# Fastlane generated output
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Local environment and secrets
+.env
+.env.*
+*.local
+*.pem
+*.p8
+*.p12
+*.cer
+*.mobileprovision
+*.provisionprofile
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace/
