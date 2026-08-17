@@ -81,11 +81,19 @@ Expected GitHub Pages URL after Pages is enabled from the `docs/` folder:
 
 `https://glennonr.github.io/DoAndDue/support/`
 
+App Store Connect Support URL:
+
+`https://glennonr.github.io/DoAndDue/support/`
+
 ## Privacy Policy URL
 
 Draft source: `docs/privacy.md`
 
 Expected GitHub Pages URL after Pages is enabled from the `docs/` folder:
+
+`https://glennonr.github.io/DoAndDue/privacy/`
+
+App Store Connect Privacy Policy URL:
 
 `https://glennonr.github.io/DoAndDue/privacy/`
 
