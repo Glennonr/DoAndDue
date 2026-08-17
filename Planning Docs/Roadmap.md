@@ -1692,10 +1692,11 @@ This section tracks what Do & Due needs before a first App Store submission. It 
 
 ## App assets and launch polish
 
-* [ ] Final app icon added at all required sizes through the asset catalog.
+* [x] Final app icon added through the asset catalog with 1024px light, dark, and tinted variants.
 * [ ] Widget icon/extension appearance checked in light mode, dark mode, tinted mode, and Lock Screen contexts.
 * [ ] Launch screen reviewed for brand consistency.
 * [ ] Light and dark mode screenshots verified against the final UI.
+* [x] App Store screenshot checklist prepared at `Planning Docs/App Store Screenshot Checklist.md`.
 * [ ] Dynamic Type sanity pass for Today, Tasks, Done, editor, detail, and widget.
 * [ ] VoiceOver labels checked for completion buttons, add buttons, delete buttons, widget controls, and debug-free Release UI.
 
