@@ -314,6 +314,10 @@ struct TaskEditorView: View {
     ) -> some View {
         Button {
             schedule = option
+
+            if option == .anytime {
+                reminder = .none
+            }
         } label: {
             HStack(spacing: 14) {
                 Image(systemName: schedule == option ? "circle.inset.filled" : "circle")
@@ -371,23 +375,32 @@ struct TaskEditorView: View {
 
             Spacer()
 
-            Picker(
-                "Reminder",
-                selection: $reminder
-            ) {
-                ForEach(TaskReminder.allCases) { reminder in
-                    Text(reminder.displayName)
-                        .tag(reminder)
+            if schedule == .anytime {
+                Text(TaskReminder.none.displayName)
+                    .foregroundStyle(DoAndDueStyle.text2)
+            } else {
+                Picker(
+                    "Reminder",
+                    selection: $reminder
+                ) {
+                    ForEach(TaskReminder.allCases) { reminder in
+                        Text(reminder.displayName)
+                            .tag(reminder)
+                    }
                 }
+                .labelsHidden()
+                .pickerStyle(.menu)
             }
-            .labelsHidden()
-            .pickerStyle(.menu)
         }
         .padding(.vertical, 12)
     }
 
     private var trimmedTitle: String {
         title.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    private var savedReminder: TaskReminder {
+        schedule == .anytime ? .none : reminder
     }
 
     private func focusTitleFieldIfNeeded() {
@@ -729,7 +742,7 @@ struct TaskEditorView: View {
             task.taskType = taskType
             task.schedule = schedule
             task.dueDate = schedule == .anytime ? nil : dueDate
-            task.reminder = reminder
+            task.reminder = savedReminder
             task.recurrenceInterval = recurrenceInterval
             task.recurrenceUnit = recurrenceUnit
             task.fixedFrequency = fixedFrequency
@@ -766,7 +779,7 @@ struct TaskEditorView: View {
                 taskType: taskType,
                 schedule: schedule,
                 dueDate: schedule == .anytime ? nil : dueDate,
-                reminder: reminder,
+                reminder: savedReminder,
                 recurrenceInterval: recurrenceInterval,
                 recurrenceUnit: recurrenceUnit,
                 fixedFrequency: fixedFrequency,

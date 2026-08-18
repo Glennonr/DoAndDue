@@ -78,7 +78,9 @@ struct TaskDetailView: View {
 
                             detailRow(
                                 title: "Reminder",
-                                value: task.reminder.displayName
+                                value: task.schedule == .anytime
+                                    ? TaskReminder.none.displayName
+                                    : task.reminder.displayName
                             )
                             detailDivider
 
@@ -252,16 +254,18 @@ struct TaskDetailView: View {
         value: String,
         emphasized: Bool = false
     ) -> some View {
-        HStack {
+        HStack(alignment: .firstTextBaseline, spacing: 14) {
             Text(title)
                 .foregroundStyle(DoAndDueStyle.text)
+                .fixedSize(horizontal: true, vertical: false)
 
-            Spacer()
+            Spacer(minLength: 0)
 
             Text(value)
                 .fontWeight(emphasized ? .semibold : .regular)
                 .foregroundStyle(emphasized ? DoAndDueStyle.accent : DoAndDueStyle.text2)
                 .multilineTextAlignment(.trailing)
+                .lineLimit(2)
         }
         .padding(.vertical, 11)
     }
